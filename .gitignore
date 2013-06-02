@@ -1,4 +1,6 @@
 /.bundle
 /.idea
 /vendor/bundle
+# jeweler generated
+/pkg
 
