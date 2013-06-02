@@ -1,3 +1,8 @@
+PATH
+  remote: .
+  specs:
+    xdelta-merger (0.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -29,3 +34,4 @@ DEPENDENCIES
   jeweler
   rake
   rspec
+  xdelta-merger!
