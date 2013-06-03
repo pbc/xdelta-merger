@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require "xdelta_merger"
+
