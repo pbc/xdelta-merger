@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Pawel Barcik"]
-  s.date = "2013-06-02"
+  s.date = "2013-06-03"
   s.description = ""
   s.email = "pawel.barcik@gmail.com"
   s.executables = ["xdelta_merger"]
@@ -29,27 +29,27 @@ Gem::Specification.new do |s|
     "bin/xdelta_merger",
     "lib/.gitkeep",
     "lib/xdelta-merger/entities.rb",
-    "lib/xdelta-merger/entities/contents.rb",
-    "lib/xdelta-merger/entities/contents/memory_based_content.rb",
     "lib/xdelta-merger/entities/files.rb",
-    "lib/xdelta-merger/entities/files/base_file.rb",
+    "lib/xdelta-merger/entities/files/basic_file.rb",
+    "lib/xdelta-merger/entities/files/basic_file_creator.rb",
+    "lib/xdelta-merger/entities/files/contents.rb",
+    "lib/xdelta-merger/entities/files/contents/memory_based_content.rb",
     "lib/xdelta-merger/entities/files/versioned_file.rb",
-    "lib/xdelta-merger/interactors.rb",
-    "lib/xdelta-merger/interactors/versioned_file_creator.rb",
+    "lib/xdelta-merger/entities/files/versioned_file_creator.rb",
     "lib/xdelta-merger/merger.rb",
-    "lib/xdelta-merger/providers.rb",
-    "lib/xdelta-merger/providers/versioned_file.rb",
+    "lib/xdelta-merger/patcher.rb",
     "lib/xdelta_merger.rb",
     "spec/fixtures.rb",
     "spec/fixtures/file_fixtures.rb",
     "spec/fixtures/file_list.yml",
     "spec/integration/merger_spec.rb",
     "spec/lib/xdelta-merger/entities/contents/memory_based_content_spec.rb",
-    "spec/lib/xdelta-merger/entities/files/base_file_spec.rb",
+    "spec/lib/xdelta-merger/entities/files/basic_file_creator_spec.rb",
+    "spec/lib/xdelta-merger/entities/files/basic_file_spec.rb",
+    "spec/lib/xdelta-merger/entities/files/versioned_file_creator_spec.rb",
     "spec/lib/xdelta-merger/entities/files/versioned_file_spec.rb",
-    "spec/lib/xdelta-merger/interactors/versioned_file_creator_spec.rb",
     "spec/lib/xdelta-merger/merger_spec.rb",
-    "spec/lib/xdelta-merger/providers/versioned_file_spec.rb",
+    "spec/lib/xdelta-merger/patcher_spec.rb",
     "spec/lib/xdelta_merger_spec.rb",
     "spec/spec_helper.rb",
     "xdelta-merger.gemspec"
@@ -74,8 +74,18 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<bundler>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
+      s.add_development_dependency(%q<webmock>, [">= 0"])
+      s.add_development_dependency(%q<rake>, [">= 0"])
+      s.add_development_dependency(%q<bundler>, [">= 0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<rspec>, [">= 0"])
     else
       s.add_dependency(%q<xdelta-merger>, [">= 0"])
+      s.add_dependency(%q<rake>, [">= 0"])
+      s.add_dependency(%q<bundler>, [">= 0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+      s.add_dependency(%q<rspec>, [">= 0"])
+      s.add_dependency(%q<webmock>, [">= 0"])
       s.add_dependency(%q<rake>, [">= 0"])
       s.add_dependency(%q<bundler>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
@@ -88,6 +98,11 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency(%q<xdelta-merger>, [">= 0"])
+    s.add_dependency(%q<rake>, [">= 0"])
+    s.add_dependency(%q<bundler>, [">= 0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+    s.add_dependency(%q<rspec>, [">= 0"])
+    s.add_dependency(%q<webmock>, [">= 0"])
     s.add_dependency(%q<rake>, [">= 0"])
     s.add_dependency(%q<bundler>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
